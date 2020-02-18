@@ -1,0 +1,3 @@
+Lista saker större. Detta för att se alla installerade paket. 
+
+	COLUMNS=200 dpkg -l

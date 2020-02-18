@@ -1,0 +1,48 @@
+BASIC OF HTML
+BASICS
+	<!DOCTYPE html>	Shows browser which version of HTML you are using.
+	<html></html>	Should enclose everything, except the one above. 
+	<main></main>	encloses everything shown on page
+	<h1></h1>	heading one to six. Headlines, used for SEO among other things. 
+	...	
+	<h6></h6>
+	<p></p>
+	
+	<ul>		undorderd list
+	  <li></li>	elements in list
+	</ul>
+	<ol>		ordered list
+	  <li></li>	elements in list
+	</ol>
+	
+LINKS	
+
+	<a href="url/"></a>				
+	link to site
+	<a href="#contacts">Go to contact us</a>	Internal link #contacts shows where
+	...
+	<h2 id="contacts">Contact us</h2>		Id helps link find. 
+	
+	<p> Test <a target="_blank" href="url"> Link </a> </p>	Link nested in paragraph
+	
+IMAGES
+	<img src="url" alt="text description or empty">	Images must contain alt description.
+	
+	<a href="url/"><img src="url" alt="alt"></a>	Image that links - nest image in link. 
+
+INPUT
+	<form action="/url-where-to send data">INPUT THINGS</form>	This creates a web form that transmits data. Otherwise the buttons exists and input menus exist, but doesnt do anything.
+	
+	<input type="text" placeholder="xxx" required> 			Text field. Placeholder disappears when clicked. Required means you have to input something
+	
+	<button type="submit">this button submits the form</button>	Submit button, submits form.
+	<label for="indoor"> 						Label makes it possible to click the text, not only the input symbole. Here you can press both the little dot and the text indoor. 
+  	<input id="indoor" type="radio" name="indoor-outdoor">Indoor 	Radio button. Little circular button. Usually only for one selection out of many. 
+	</label>
+	
+	<input id="loving" type="checkbox" name="personality" checked>		Surrond with label exactly like above. Checkboxes are when you can select many selections instead of just one. Checked is
+										preselected value
+	<input id="lazy" type="checkbox" name="personality" value="lazy">	Id is unique thing attribute, name is group of buttons, id helps the label find correct button, value is what value that is
+										transferred to server upon submission
+	
+	
