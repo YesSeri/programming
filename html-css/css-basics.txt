@@ -1,0 +1,122 @@
+CSS - CASCADING STYLE SHEETS
+
+FUNCTION
+Controls:
+	color
+	fonts
+	positioning
+	spacing
+	sizing
+	decorations
+	transitions
+
+BASICS
+	<h1 style="color: blue;">Text</h1>	Sets color for heading one.
+	
+	<style>					Makes h1 blue. Easier to handle in bigger picture.
+	  h1 {
+    	    color: blue;
+ 	  }
+	</style>
+	<h1>CatPhotoApp</h1>
+	
+	<style>					Creates class called red-text. Apply with class="red-text".
+	  .red-text {
+	    color: red;
+	  }
+	</style>
+
+	<p id="cat-form">			Gives p an id, cat form.
+
+	<style>					
+	  .test-class {
+    	    color: blue				Makes text blue.
+	    font-size: 16px;			Makes font 16px.
+	    font-family: monospace, alt font	Font monospace, uses alt font if monospace is not used. Good when importing fonts online, like below. Always available fonts are 
+						monospace, serif and sans-serif. Choose one of these as alt.
+	    
+	    width: 200px; 			Makes img max 200px. 
+	    border-style: solid;		Makes a border. 
+	    border-color: green;		Green border.
+	    border-size: 3px;			3px wide.
+	    border-radius: 10px/50%		Rounds border, and pic. If border-radius>50 of pic+border-width then it is round
+
+	    background color:red;		Red background
+ 	  }
+	</style>
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"> Imports lobster font, insert before <style>
+	
+	[type='radio'] {			Set style for a type of thing. Here we set the margins around every radio button.
+	  margin: 20px 0px 20px 0px;
+	}
+
+
+PADDING, MARGIN, BORDER
+	Padding is distance between content and border. How big inside of box is. 
+	Margin is distance between objects border and other content. The bigger value, the smaller the box. 
+	To control individual sides
+		padding-top:
+		padding-right:
+		padding-left:
+		padding-bottom:
+
+		margin-top: 
+		margin-right:
+		margin-bottom:
+		margin-left:
+
+	Alternative is to use clockwise notation. It goes in the order top, right, bottom, left. Same for margin
+		padding: 20, 40, 40, 20
+
+INHERITANCE
+<style>				Colors are inherited. All things under body (and body is everything on page) gets the color. Nothing on body becomes green, only <p>. Font is also inherited.
+  body {
+    font-family:monospace;	
+    color: green;
+    background-color: black;
+  }
+  .pink-text {			If I style h1 pink, it will override the green, also if I make class and assign it to h1. If on the same level of priority, two classes t.ex, the last one gets choosen. 
+    color: pink;
+  }
+  #orange-text{			Id is higher prioritzed than class. 
+    color:orange;
+  }
+
+</style>
+<h1 style="color: white" class="pink-text" id="orange-text">Hello World</h1> 		Inline style always gets highest prioritized. 
+
+.pink-text {
+    color: pink !important;							Use !important to up prioritize.
+  }
+
+HEX COLORS
+
+<style>
+  .red-text {
+    color: #000000;		This is the color black. Can be shortened to #000. Fewer possible colors, but quicker. #FFF=#F(F)F(F)F(F)
+    color: rgb(0, 0, 0)		This is also black.
+
+VARIABLE
+	--penguin-skin: gray;			Variable penguin skin with value gray
+	background: var(--penguin-skin);	Set background to the variable penguin-skins color.
+
+	A double leading dash is used for defining custom properties. For more information, check out this W3C Spec page.
+
+	background: var(--pengiun-skin, black);	Fallback value of black. 
+  }
+</style>
+
+ROOT
+
+<style>		Root is globally available. Refers most often to the <html> in the html doc, when writing normal stuff/
+  :root {
+
+  }
+</style>
+
+@media (max-width: 350px) {		if screen is smaller then 350 px, then penguin is 200 px
+    :root {
+      --penguin-size:200
+    }
+  }

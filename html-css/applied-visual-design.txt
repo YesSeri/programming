@@ -1,0 +1,6 @@
+text-align: justify, right, left, center
+
+<strong>TEXT</strong>		Make text bold
+<u>TEXT</u>			Underline text
+<em>TEXT</em>			Make text italic
+<s>TEXT</s>			Strikethrough
