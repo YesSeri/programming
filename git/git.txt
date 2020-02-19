@@ -1,0 +1,8 @@
+When you've done something locally. Create a repo, with the name you want. And then use this to push what you've done locally remote. The first one connects. The second one connects so you just need to use git push, without specifying the rest. It connects the current branch with some other online branch.
+
+$ git remote add origin git@github.com:username/new_repo
+$ git push -u origin master
+
+If you want to copy online repo, then use:
+
+git clone
