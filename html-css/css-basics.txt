@@ -1,5 +1,5 @@
 CSS - CASCADING STYLE SHEETS
-
+	
 FUNCTION
 Controls:
 	color
@@ -31,7 +31,9 @@ BASICS
 	<style>					
 	  .test-class {
     	    color: blue				Makes text blue.
+
 	    font-size: 16px;			Makes font 16px.
+	    font-weight: 400;			Controls thickness. NO PIXEL AFTER
 	    font-family: monospace, alt font	Font monospace, uses alt font if monospace is not used. Good when importing fonts online, like below. Always available fonts are 
 						monospace, serif and sans-serif. Choose one of these as alt.
 	    

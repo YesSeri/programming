@@ -4,3 +4,128 @@ text-align: justify, right, left, center
 <u>TEXT</u>			Underline text
 <em>TEXT</em>			Make text italic
 <s>TEXT</s>			Strikethrough
+<hr>				Make horizontal line, no text, NO CLOSING TAG!
+
+COLOR/SHADOW
+	rgba(255,255,255,0.5)	The a is for alpha meaning level of opacity. From 0-1
+
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);		Two shadows, seperated by comma. 
+
+    offset-x (how far to push the shadow horizontally from the element),		These are its settings.  Blur and spread radius are optional. 
+    offset-y (how far to push the shadow vertically from the element),
+    blur-radius,
+    spread-radius and
+    color, in that order.
+
+
+OPACITY
+	opacity: 0.7;	One is visible, zero is invisible.
+
+TEXT TRANSFORM
+
+text-transform:
+	lowercase;	lowercase
+	uppercase;	UPPERCASE
+	capitalize;	Capitalize The Text
+	initial;	Default value
+	inherit;	Inherit from parent element
+	none;		DEFAULT Use original text
+
+line-height: 25px;	justerar radavstand
+
+PSEUDOCLASS AND CSS BOX MODEL
+
+a:hover {		This is a pseudo:class. Only activ on certain events, such as hovering over here. 
+  color: red;
+}
+
+h2 {			
+    position:relative;	Moves the 10 px up relative to where it normally should have been.
+    position:absolute;	Moves 10 px from where ever the parent is. 
+    position:fixed;	Won't move when user scrolls. 
+    bottom:10px;
+    top
+    left
+    right
+  }
+
+
+#left {			Put to elements side to side.
+  float: left;
+  width: 50%;
+}
+#right {
+  float:right;
+  width: 40%;
+
+z-index: 1		Used to set which item is on top, when overlapping. 
+
+CENTER
+	margin:auto	Centers object
+
+COLORS
+
+    
+    Color = Text Color
+    Background-color = the color of the background
+    Background = gives you the posibillity to set color, image , etc...
+
+    
+	Use complementary colors
+	#ff0000 red - comp color #00ffff cyan
+	
+	Secondary colors are the mix of two primary colors. #ffff00, #ff00ff or Cyan
+	
+	Tertiary colors are a mix of One primary and one secondary. 
+
+	background-color: hsl(120, 100%, 50%);		Hue, Saturation, Lightness. Color, grayness, lightness
+
+	background: linear-gradient(90deg, red, #FFFF00);	Makes a gradient. Can use hex colors, or anything.
+
+background: repeating-linear-gradient(			Makes a gradient that repeats itself. 
+      90deg,
+      yellow 0px,
+      blue 40px,
+      green 40px,
+      red 80px
+    );
+
+body {										Set background to an URL.
+  background: url(https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png);
+}
+
+
+TRANSFORM
+	transform: scale(2)		Make something double as big. 
+
+div:hover{				Pseudoclass. Make something bigger when hovering over it.
+    transform:scale(1.1)
+
+	transform: skewX(30deg)		Skew something(Make it a romb)
+ }
+
+ANIMATION
+
+  .my-rect {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    animation-name: yellow-blue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+	
+  #rect {				This rectangle content goes from yellow to blue. Make rect animation as id and object as . Create the item as class.
+    left: 25%;
+    animation-timing-function: linear;
+
+  }
+  @keyframes yellow-blue{
+    0%{
+      background-color:blue;
+    }
+    100%{
+      background-color:yellow;
+    }
